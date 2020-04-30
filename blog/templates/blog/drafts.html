@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+		<h1>DRAFTS</h1><br>
+        <article class="media content-section">         
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="">Sankalp Swami</a>
+              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+            </div>
+        </article>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">New Mail</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+            	<p>To -      <input type="email" name="to" placeholder="To"></p><br>
+            	<p>Subject - <input type="text" name="subject" placeholder="Subject"></p><br>
+            	<p>Body -    <input type="text" name="message" placeholder="Message"></p><br>
+                <button class="btn btn-outline-info" type="submit">Mail</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

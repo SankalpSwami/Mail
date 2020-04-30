@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>SENT BOX</h1>
+	{% for compose in composes %}
+	        <article class="media content-section">         
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'compose-detail' compose.id %}">{{ compose.author }}</a>
+              <small class="text-muted">{{ compose.subject }}</small>
+              <small class="text-muted float-right">{{ compose.date_posted|date:"F d, Y" }}</small>
+            </div>
+        </article>
+	{% endfor %}    
+{% endblock %}

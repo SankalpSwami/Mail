@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+	<h1>{{ compose.author }}</h1><br>
+        <article class="media content-section">         
+          <div class="media-body">
+            <div class="article-metadata">
+              <p class="mr-2">{{ compose.author }}</p><br>
+              <p class="mr-2">From - {{ compose.author.email }}</p><br>
+              <p>Date - {{ compose.date_posted|date:"F d, Y" }}</p>
+              <p>Subject - {{ compose.subject }}</p>
+              <br>
+              <p>{{ compose.body }}</p>
+            </div>
+        </article>    
+{% endblock %}
